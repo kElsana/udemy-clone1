@@ -44,6 +44,9 @@ body{
     align-items: center;
     gap: 10px;
 }
+.navBar__s4{
+    display: none;
+}
 /* my learning popup */
 .mylearning{
     position: relative;
@@ -92,8 +95,8 @@ body{
 }
 .sale-image__offer{
     position: absolute;
-    top: 100px;
-    left: 50px;
+    top: 10%;
+    left: 10%;
     border: solid 2px black;
     width: 35%;
     padding: 2%;
@@ -123,7 +126,9 @@ body{
        margin-top: 10px;
 }
 .course-card{
-    width: 300px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 10px;
 }
 .course-card img{
     height: 50%;
@@ -170,4 +175,25 @@ body{
     align-items: center;
     display: flex;
     justify-content: space-between;
+}
+
+/* media queries */
+@media screen and (max-width:800px){
+    body{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:600px){
+    .course-card{
+        flex-basis: 40%;
+    }
+    .categories{
+        display: none;
+    }
+    .navBar__s2, .navBar__s3{
+        display: none;
+    }
+    .navBar__s4{
+        display: block;
+    }
 }
